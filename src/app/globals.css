@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .grid-cols-20 {
+    grid-template-columns: repeat(20, minmax(0, 1fr));
+  }
+  .path {
+    background: #fb923c !important;
+    border-radius: 0px !important;
+  }
+  .start {
+    background: #ea580c !important;
+    border-radius: 0px !important;
+  }
+  .goal {
+    background: #ea580c !important;
+    border-radius: 0px !important;
+  }
+}
+
+body {
+  @apply bg-zinc-300;
+}
+
+h1 {
+  @apply text-4xl font-bold mb-2;
+}
+
+h2 {
+  @apply text-xl font-medium;
+}
