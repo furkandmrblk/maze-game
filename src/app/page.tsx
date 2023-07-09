@@ -98,7 +98,10 @@ export default function Home() {
     <main className="flex flex-col items-center justify-between p-4 md:p-24">
       <div className="text-center mb-4">
         <h1>The Maze Game.</h1>
-        <h2>A fun little maze game made over night.</h2>
+        <h2>
+          <strong>Goal:</strong> Set the blocks so that the steps to achieve the
+          goal meet the requirements.
+        </h2>
       </div>
 
       {!initialLoad && (
@@ -344,12 +347,18 @@ export default function Home() {
                       onMouseDown={handleMouseDown}
                       onMouseEnter={() => handleMouseEnter(i, j)}
                       onMouseUp={handleMouseUp}
-                      className={`relative py-[50%] w-full bg-zinc-300 border-zinc-900
+                      className={`relative py-[50%] w-full border-zinc-900
           ${j !== 39 ? 'border-r-[1px]' : ''}
           ${i !== 17 ? 'border-b-[1px]' : ''}
-          ${value === 1 ? 'bg-zinc-900' : 'bg-zinc-200'}
+          ${
+            hasBomb(i, j)
+              ? 'bg-red-800 md:bg-zinc-300'
+              : value === 1
+              ? 'bg-zinc-900'
+              : 'bg-zinc-300'
+          }
           ${isStart ? 'start' : isEnd ? 'goal' : 'cursor-pointer'} 
-          ${hasBomb(i, j) ? 'bg-red-800 md:bg-zinc-300' : ''}
+          
           `}
                     >
                       {hasBomb(i, j) && (
