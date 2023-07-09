@@ -23,6 +23,7 @@ module.exports = {
       green: colors.green,
       red: colors.red,
       orange: colors.orange,
+      blue: colors.blue,
     },
     extend: {
       backgroundImage: {
