@@ -24,6 +24,10 @@ body {
   @apply bg-zinc-300;
 }
 
+section {
+  @apply overflow-hidden min-h-screen max-w-[87.5rem] mx-auto px-[2rem] py-[1.25rem] md:px-[3.75rem] md:py-[2.5rem] xl:px-[7.5rem];
+}
+
 h1 {
   @apply text-4xl font-bold mb-2;
 }
