@@ -13,7 +13,7 @@ export const Navbar = () => {
       className={`${clashDisplay.className} relative z-10 flex items-center justify-between w-full mb-10 md:mb-20`}
     >
       <Link
-        href="https://furkandmrblk.com/"
+        href="https://furkandemirbilek.com/"
         className="text-black font-medium no-underline"
       >
         furkan demirbilek
